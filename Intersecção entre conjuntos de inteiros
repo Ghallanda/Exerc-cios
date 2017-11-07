@@ -1,0 +1,40 @@
+public class interseccaoEntreArrays {
+	public static void main (String [] args) {
+		int [] a1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+		int [] a2 = {2, 3, 6, 5, 9, 25, 14, 11, 4, 15, 1000};
+		int [] a3;
+		int qtd = 0;
+		for(int i = 0; i < a1.length; i++) {
+			for(int j = 0; j < a2.length; j++) {
+				if (a1[i] == a2[j]) {
+					qtd++;
+				}
+			}			
+		}
+		a3 = new int [qtd];
+		int aux = 0;
+		for (int i = 0; i < a1.length;i++) {
+			for(int j = 0; j < a2.length; j++) {
+				if(a1[i] == a2[j]) {
+					a3[aux] = a1[i];
+					aux++;
+				}
+			}
+		}
+		System.out.print("Conjunto 1: ");
+		for(int k = 0; k < a1.length; k++) {
+			System.out.print(a1[k] + "   ");
+		}
+		System.out.println();
+		System.out.print("Conjunto 2: ");
+		for(int k = 0; k < a2.length; k++) {
+			System.out.print(a2[k] + "   ");
+		}
+		System.out.println();
+		System.out.print("Números repetidos: ");
+		for (int k = 0; k < a3.length; k++) {
+			System.out.print(a3[k] + "   ");
+		}
+	}
+
+}
